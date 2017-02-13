@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Supersports</title>
+    <meta charset="UTF-8">
+        <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+
+    <title>Supersports</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+  </body>
+</html>
