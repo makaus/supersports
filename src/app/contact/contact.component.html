@@ -1,0 +1,34 @@
+
+<div class="container contact">
+	<div class="row">
+		<div class="col l5 s12">
+			<div class="row">
+				<div class="col l12">
+					<h2>CONTACT US</h2>
+				</div>
+			</div>
+			<div [hidden]="hasBeenSubmitted">
+				<form (ngSubmit)="send(contactForm, $event)" #contactForm="ngForm" novalidate>
+					<div class="row">
+						<label for="contactname" class="col l3 s12">NAME:</label><input type="text" id="contactname" name="contactname" placeholder="YOUR NAME..." [(ngModel)]="model.contactname" class="col l9 s12" required/>
+					</div>
+					<div class="row">
+						<label for="contactemail" class="col l3 s12">EMAIL:</label><input type="email" id="contactemail" name="contactemail" placeholder="YOUR E-MAIL..." [(ngModel)]="model.contactemail" class="col l9 s12" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+					</div>
+					<div class="row contact_message">
+						<label for="message" class="col l12 s12">MESSAGE:</label>
+						<div class="col l12 s12">
+							<textarea class="col l12 s12 textarea" id="message" name="message" placeholder="YOUR TEXT..."></textarea>
+						</div>
+						<div class="col l12 s12">
+							<button type="submit" class="col l4 s12 red waves-effect waves-light btn">SEND MESSAGE</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div [hidden]="!hasBeenSubmitted">
+				<h3>Your message have been sent.<br>Thank you {{model.contactname}}</h3>
+			</div>
+		</div>
+	</div>
+</div>	

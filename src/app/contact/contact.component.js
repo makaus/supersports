@@ -9,18 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var Contact = (function () {
+    function Contact() {
     }
-    AppComponent = __decorate([
+    return Contact;
+}());
+var ContactComponent = (function () {
+    function ContactComponent() {
+        this.model = new Contact();
+    }
+    ContactComponent.prototype.ngOnInit = function () {
+        this.hasBeenSubmitted = false;
+    };
+    ContactComponent.prototype.send = function (form, event) {
+        event.preventDefault();
+        this.hasBeenSubmitted = true;
+        console.log(form.value.contactname);
+    };
+    ContactComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n  \t\t\t<customheader></customheader>\n  \t\t\t<router-outlet></router-outlet>\n  \t\t\t<customfooter></customfooter>\n  \t\t\t",
+            selector: 'contact',
+            moduleId: module.id,
+            templateUrl: 'contact.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ContactComponent);
+    return ContactComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ContactComponent = ContactComponent;
+//# sourceMappingURL=contact.component.js.map

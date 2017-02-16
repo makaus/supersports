@@ -2,10 +2,15 @@
 		<div class="container">
 			<div class="nav-wrapper nav_top">
 				<!-- TOP -->
-					<a href="" class="brand-logo">
+					<a [routerLink]="['home']" class="brand-logo">
 							<img src="images/logosupersports.png" alt="">
 					</a>
-					<ul class="nav_info right">
+					<ul class="right hide-on-med-and-down">
+						<li><a href=""><i class="material-icons">phone</i>+45 12345678</a></li>
+						<li><a href=""><i class="material-icons">mail_outline</i>LOREM@IPSUM.COM</a></li>
+						<li><a class="checkout" href=""><i class="material-icons">shopping_cart</i>$ 99.54 CHECKOUT</a></li>
+					</ul>
+					<ul class="hide-on-large-only">
 						<li><a href=""><i class="material-icons">phone</i>+45 12345678</a></li>
 						<li><a href=""><i class="material-icons">mail_outline</i>LOREM@IPSUM.COM</a></li>
 						<li><a class="checkout" href=""><i class="material-icons">shopping_cart</i>$ 99.54 CHECKOUT</a></li>
@@ -16,13 +21,21 @@
 			<div class="nav-wrapper nav_bot">
 				<!-- MENU -->
 				<ul class="left">
-					<li><a href="">HOME</a></li>
+					<li><a [routerLink]="['home']">HOME</a>
+						<ul>
+							<li><a href="">Test1</a></li>
+							<li><a href="">Test2</a></li>
+							<li><a href="">Test3</a></li>
+
+						</ul>
+
+					</li>
 					<li><a href="">MEN</a></li>
 					<li><a href="">WOMEN</a></li>
 					<li><a href="">KIDS</a></li>
 					<li><a href="">SALE</a></li>
 					<li><a href="">ABOUT US</a></li>
-					<li><a href="">SUPPORT</a></li>
+					<li><a [routerLink]="['support']">SUPPORT</a></li>
 				</ul>
 				<div class="search right">
 				<!-- SEARCH -->

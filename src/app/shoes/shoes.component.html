@@ -1,32 +1,36 @@
 <section>
-	<div class="row center valign-wrapper">
-		<hr class="vertical col l2 push-l1"><h2 class="pull-l1 popular_heading col l3">POPULAR PRODUCTS</h2><hr class="pull-l3 vertical col l2">
+	<div class="row center valign-wrapper popularrow">
+		<hr class="vertical col l2 push-l1 s2"><h2 class="pull-l1 popular_heading col l3 s7">POPULAR PRODUCTS</h2><hr class="pull-l3 vertical col l2 s2">
 	</div>
-	<div class="row">
+	<div class="row shoesrow">
         <div class="col s6 l3 popular" *ngFor="let shoe of shoes">
-        	<div class="col s12 l12 row_top">
-				<img [src]="'images/' + shoe.image[0]" [alt]="shoe.name">
-        	</div>
+        	<a [routerLink]="['/shoe', shoe.id]">
+	        	<div class="col s12 l12 row_top">
+					<img [src]="'images/' + shoe.image[0]" [alt]="shoe.name">
+	        	</div>
+        	</a>
         	<div class="col s12 l12 row_med">
-				<div class="col l12">
-					<h3>{{shoe.name}}</h3>
-					<h4>{{shoe.type}}</h4>
+				<div class="col l12 s12">
+        			<a [routerLink]="['/shoe', shoe.id]">
+						<h3>{{shoe.name}}</h3>
+					</a>
+						<h4>{{shoe.type}}</h4>
 					<p class="bottom-border">
 						{{shoe.description}}
 					</p>
 				</div>
-				<div class="col s8 l8">
-					<p class="left">{{shoe.price | currency:'USD':true:'1.2-2'}}</p>
+				<div class="col s7 l9">
+					<p class="shoep">{{shoe.price | currency:'USD':true:'1.2-2'}}</p>
 				</div>
-				<div class="col s2 l2">
-					<i class="material-icons">close</i>
+				<div class="col s2 l1">
+					<i class="material-icons">whatshot</i>
 				</div>
-				<div class="col s2 l2">
+				<div class="col s2 l1">
 					<i class="material-icons">add_circle_outline</i>
 				</div>
         	</div>
         	<div class="row_bot">	
-					<button class="red waves-effect waves-light btn col l12 s12">BUY NOW</button>
+					<button class="red btn col l12 s12">BUY NOW</button>
 			</div>
     	</div>
 	</div>
