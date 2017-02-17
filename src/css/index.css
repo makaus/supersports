@@ -347,6 +347,8 @@ header {
       color: white; }
       .footer .footer_bot .blog_posts a:hover {
         color: #f45a40; }
+    .footer .footer_bot .social {
+      margin-top: 10px; }
 
 /* MOBILE */
 /* NAVIGATION */
