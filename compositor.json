@@ -1,0 +1,143 @@
+{
+  "name": "makaus/supersports",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/makaus/supersports",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/supersorts",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "supersports",
+      "subhead": "QuickStart package.json from the documentation, supplemented with testing support",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "supersports: QuickStart package.json from the documentation, supplemented with testing support",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "makaus",
+          "repo": "supersports"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1>Angular QuickStart Source</h1>\n<p><a href=\"https://travis-ci.org/angular/quickstart\"><img src=\"https://travis-ci.org/angular/quickstart.svg?branch=master\"></a></p>\n<p>This repository holds the TypeScript source code of the <a href=\"https://angular.io/docs/ts/latest/quickstart.html\">angular.io quickstart</a>,\nthe foundation for most of the documentation samples and potentially a good starting point for your application.</p>\n<p>It&apos;s been extended with testing support so you can start writing tests immediately.</p>\n<p><strong>This is not the perfect arrangement for your application. It is not designed for production.\nIt exists primarily to get you started quickly with learning and prototyping in Angular</strong></p>\n<p>We are unlikely to accept suggestions about how to grow this QuickStart into something it is not.\nPlease keep that in mind before posting issues and PRs.</p>\n<h2>Updating to a newer version of the Quickstart Repo</h2>\n<p>From time to time the QuickStart will add be enhanced with support for new features or to reflect\nchanges to the <a href=\"https://angular.io/docs/ts/latest/guide/style-guide.html\">official Style Guide</a>.</p>\n<p>You can update your existing project to an up-to-date QuickStart by following these instructions:</p>\n<ul>\n<li>Create a new project using the <a href=\"#create-a-new-project-based-on-the-quickstart\">instructions below</a></li>\n<li>Copy the code you have in your project&apos;s <code>main.ts</code> file onto <code>src/app/main.ts</code> in the new project</li>\n<li>Copy your old <code>app</code> folder into <code>src/app</code></li>\n<li>Delete <code>src/app/main.ts</code> if you have one (we now use <code>src/main.ts</code> instead)</li>\n<li>Copy your old <code>index.html</code>, <code>styles.css</code> and <code>tsconfig.json</code> into <code>src/</code></li>\n<li>Install all your third party dependencies</li>\n<li>Copy your old <code>e2e/</code> folder into <code>e2e/</code></li>\n<li>Copy over any other files you added to your project</li>\n<li>Copy your old <code>.git</code> folder into your new project&apos;s root</li>\n</ul>\n<p>Now you can continue working on the new project.</p>\n<h2>Prerequisites</h2>\n<p>Node.js and npm are essential to Angular development. </p>\n<p><a href=\"https://docs.npmjs.com/getting-started/installing-node\" target=\"_blank\">\nGet it now</a> if it&apos;s not already installed on your machine.</p>\n<p><strong>Verify that you are running at least node <code>v4.x.x</code> and npm <code>3.x.x</code></strong>\nby running <code>node -v</code> and <code>npm -v</code> in a terminal/console window.\nOlder versions produce errors.</p>\n<p>We recommend <a href=\"https://github.com/creationix/nvm\">nvm</a> for managing multiple versions of node and npm.</p>\n<h2>Create a new project based on the QuickStart</h2>\n<p>Clone this repo into new project folder (e.g., <code>my-proj</code>).</p>\n<pre>git clone https://github.com/angular/quickstart  my-proj\ncd my-proj</pre><p>We have no intention of updating the source on <code>angular/quickstart</code>.\nDiscard the <code>.git</code> folder..</p>\n<pre>rm -rf .git  # OS/X (bash)\nrd .git /S/Q # windows</pre><h3>Delete <em>non-essential</em> files (optional)</h3>\n<p>You can quickly delete the <em>non-essential</em> files that concern testing and QuickStart repository maintenance\n(<strong><em>including all git-related artifacts</em></strong> such as the <code>.git</code> folder and <code>.gitignore</code>!)\nby entering the following commands while in the project folder:</p>\n<h5>OS/X (bash)</h5>\n<pre>xargs rm -rf &lt; non-essential-files.osx.txt\nrm src/app/*.spec*.ts\nrm non-essential-files.osx.txt</pre><h5>Windows</h5>\n<pre>for /f %i in (non-essential-files.txt) do del %i /F /S /Q\nrd .git /s /q\nrd e2e /s /q</pre><h3>Create a new git repo</h3>\n<p>You could <a href=\"#start-development\">start writing code</a> now and throw it all away when you&apos;re done.\nIf you&apos;d rather preserve your work under source control, consider taking the following steps.</p>\n<p>Initialize this project as a <em>local git repo</em> and make the first commit:</p>\n<pre>git init\ngit add .\ngit commit -m &quot;Initial commit&quot;</pre><blockquote>\n<p>Recover the deleted <code>.gitignore</code> from the QuickStart repository \nif you lost it in the <em>Delete non-essential files</em> step.</p>\n</blockquote>\n<p>Create a <em>remote repository</em> for this project on the service of your choice.</p>\n<p>Grab its address (e.g. <em><code>https://github.com/&lt;my-org&gt;/my-proj.git</code></em>) and push the <em>local repo</em> to the <em>remote</em>.</p>\n<pre>git remote add origin &lt;repo-address&gt;\ngit push -u origin master</pre><h2>Install npm packages</h2>\n<blockquote>\n<p>See npm and nvm version notes above</p>\n</blockquote>\n<p>Install the npm packages described in the <code>package.json</code> and verify that it works:</p>\n<pre>npm install\nnpm start</pre><blockquote>\n<p>Doesn&apos;t work in <em>Bash for Windows</em> which does not support servers as of January, 2017.</p>\n</blockquote>\n<p>The <code>npm start</code> command first compiles the application, \nthen simultaneously re-compiles and runs the <code>lite-server</code>.\nBoth the compiler and the server watch for file changes.</p>\n<p>Shut it down manually with <code>Ctrl-C</code>.</p>\n<p>You&apos;re ready to write your application.</p>\n<h3>npm scripts</h3>\n<p>We&apos;ve captured many of the most useful commands in npm scripts defined in the <code>package.json</code>:</p>\n<ul>\n<li><code>npm start</code> - runs the compiler and a server at the same time, both in &quot;watch mode&quot;.</li>\n<li><code>npm run build</code> - runs the TypeScript compiler once.</li>\n<li><code>npm run build:w</code> - runs the TypeScript compiler in watch mode; the process keeps running, awaiting changes to TypeScript files and re-compiling when it sees them.</li>\n<li><code>npm run serve</code> - runs the <a href=\"https://www.npmjs.com/package/lite-server\">lite-server</a>, a light-weight, static file server, written and maintained by\n<a href=\"https://github.com/johnpapa\">John Papa</a> and\n<a href=\"https://github.com/cgmartin\">Christopher Martin</a>\nwith excellent support for Angular apps that use routing.</li>\n</ul>\n<p>Here are the test related scripts:</p>\n<ul>\n<li><code>npm test</code> - compiles, runs and watches the karma unit tests</li>\n<li><code>npm run e2e</code> - compiles and run protractor e2e tests, written in Typescript (*e2e-spec.ts)</li>\n</ul>\n<h2>Testing</h2>\n<p>The QuickStart documentation doesn&apos;t discuss testing.\nThis repo adds both karma/jasmine unit test and protractor end-to-end testing support.</p>\n<p>These tools are configured for specific conventions described below.</p>\n<p><em>It is unwise and rarely possible to run the application, the unit tests, and the e2e tests at the same time.\nWe recommend that you shut down one before starting another.</em></p>\n<h3>Unit Tests</h3>\n<p>TypeScript unit-tests are usually in the <code>src/app</code> folder. Their filenames must end in <code>.spec.ts</code>.</p>\n<p>Look for the example <code>src/app/app.component.spec.ts</code>.\nAdd more <code>.spec.ts</code> files as you wish; we configured karma to find them.</p>\n<p>Run it with <code>npm test</code></p>\n<p>That command first compiles the application, then simultaneously re-compiles and runs the karma test-runner.\nBoth the compiler and the karma watch for (different) file changes.</p>\n<p>Shut it down manually with <code>Ctrl-C</code>.</p>\n<p>Test-runner output appears in the terminal window.\nWe can update our app and our tests in real-time, keeping a weather eye on the console for broken tests.\nKarma is occasionally confused and it is often necessary to shut down its browser or even shut the command down (<code>Ctrl-C</code>) and\nrestart it. No worries; it&apos;s pretty quick.</p>\n<h3>End-to-end (E2E) Tests</h3>\n<p>E2E tests are in the <code>e2e</code> directory, side by side with the <code>src</code> folder.\nTheir filenames must end in <code>.e2e-spec.ts</code>.</p>\n<p>Look for the example <code>e2e/app.e2e-spec.ts</code>.\nAdd more <code>.e2e-spec.js</code> files as you wish (although one usually suffices for small projects);\nwe configured Protractor to find them.</p>\n<p>Thereafter, run them with <code>npm run e2e</code>.</p>\n<p>That command first compiles, then simultaneously starts the <code>lite-server</code> at <code>localhost:8080</code>\nand launches Protractor.  </p>\n<p>The pass/fail test results appear at the bottom of the terminal window.\nA custom reporter (see <code>protractor.config.js</code>) generates a  <code>./_test-output/protractor-results.txt</code> file\nwhich is easier to read; this file is excluded from source control.</p>\n<p>Shut it down manually with <code>Ctrl-C</code>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/makaus/supersports",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/makaus",
+          "text": "makaus"
+        }
+      ]
+    }
+  ]
+}
